@@ -28,6 +28,12 @@ def set_options(input):
                         '-clean',
                         action='store_true',help='Disables watermark and timecode for a clean image')
     parser.add_argument(
+                        '-wm',
+                        action='store_true',help='Disables timecode for a watermark only image')
+    parser.add_argument(
+                        '-bitc',
+                        action='store_true',help='Disables watermark for a timecode only image')
+    parser.add_argument(
                         '-yadif',
                         action='store_true',help='Yet Another DeInterlace Filter')
     parser.add_argument(
