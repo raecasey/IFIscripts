@@ -59,7 +59,7 @@ def main(args_):
     filmo_csv_dict = ififuncs.extract_metadata(args.filmo_csv)[0]
     for accession in sorted_csv_dict:
         number = accession['accession number']
-        for technical_record in sorted_csv_dict:
+        for technical_record in pbcore_csv_dict:
             if technical_record['Accession Number'] == number:
                 accession['acquisition method'] = technical_record['Type Of Deposit']
                 accession['acquired from'] = technical_record['Donor']
