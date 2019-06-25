@@ -78,7 +78,7 @@ def main(args_):
     new_csv_filename = time.strftime("%Y-%m-%dT%H_%M_%S_") + 'helper_register.csv'
     new_csv = os.path.join(desktop_logs_dir, new_csv_filename)
     with open(new_csv, 'w') as csvfile:
-            fieldnames = ififuncs.extract_metadata(args.register)[1]
+            fieldnames = ififuncs.extract_metadata(args.sorted_csv)[1]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
             for i in sorted_csv_dict:
