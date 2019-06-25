@@ -64,7 +64,7 @@ def main(args_):
                 accession['acquisition method'] = technical_record['Type Of Deposit']
                 accession['acquired from'] = technical_record['Donor']
                 accession['date acquired'] = technical_record['Date Of Donation']
-                for filmo_csv_record in filmo_csv_dict:
+                for filmographic_record in filmo_csv_dict:
                     if filmographic_record['Reference Number'] == technical_record['Reference Number']:
                         if filmographic_record['Title'] == '':
                             title = filmographic_record['TitleSeries'] + '; ' + filmographic_record['EpisodeNo']
